@@ -90,11 +90,12 @@ export default class PickerCheckbox extends React.Component {
     renderPlaceHolder (){
         vPlaceHolder = this.props.placeholder || '';
         vColorTextPlaceHolder = this.props.placeholderTextColor || PLACEHOLDER_COLOR;
+        vColorTextPlaceHolderSelected = this.props.placeholderTextColor || PLACEHOLDER_ITEMS_SELECTED_COLOR;
         if (this.state.checkedItems.length > 0){
             vPlaceHolderSelectedItems = this.props.placeholderSelectedItems || PLACEHOLDER_ITEMS_SELECTED;
             vCount = this.state.checkedItems.length
             vPlaceHolder = vPlaceHolderSelectedItems.replace('$count', vCount);
-            vColorTextPlaceHolder = PLACEHOLDER_ITEMS_SELECTED_COLOR
+            vColorTextPlaceHolder = vColorTextPlaceHolderSelected
         }
     
         return(
